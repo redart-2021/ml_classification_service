@@ -8,7 +8,7 @@ gunicorn --bind 0.0.0.0:5000 wsgi:app
 ~~~
 ## Request
 ## GET /
-##R esponse
+## Response
 ~~~
 {"Service status":"OK!","used model":"core/models/knn_model.model"}
 ~~~
