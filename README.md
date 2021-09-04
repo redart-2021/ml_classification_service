@@ -6,14 +6,14 @@
 pip3 install -r requirements.txt
 gunicorn --bind 0.0.0.0:5000 wsgi:app
 ~~~
-###Request
-####GET /
-###Response
+## Request
+## GET /
+##R esponse
 ~~~
 {"Service status":"OK!","used model":"core/models/knn_model.model"}
 ~~~
-###Request
-####POST /predict
+### Request
+#### POST /predict
 ~~~
 {
    "right_fields": 900,
@@ -21,7 +21,7 @@ gunicorn --bind 0.0.0.0:5000 wsgi:app
    "user_stats": 27.51388888888889
 }
 ~~~
-###Response
+### Response
 ~~~
 {
     "user_type": "3"
