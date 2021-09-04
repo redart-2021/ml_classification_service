@@ -1,4 +1,4 @@
-from sklearn.cluster import KMeans
+from sklearn import neighbors
 import pickle
 from datetime import date
 
@@ -15,6 +15,6 @@ class ActiveClassificator:
         return self.model.predict(data)
 
     def fit(self, data, n_clusters=6, random_state=0):
-        self.model = KMeans(n_clusters=n_clusters, random_state=random_state).fit(data)
+        self.model = neighbors.KNeighborsClassifier(n_clusters=n_clusters, random_state=random_state).fit(data)
         pickle.dump(self.model, open(f"{date.today()}_classificator.model", 'wb'))
 
